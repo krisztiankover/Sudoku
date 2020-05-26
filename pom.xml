@@ -10,6 +10,18 @@
         <connection>https://github.com/krisztiankover/Sudoku.git</connection>
         <developerConnection>https://github.com/krisztiankover/Sudoku.git</developerConnection>
     </scm>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <developers>
         <developer>
             <name>Krisztián Kövér</name>
@@ -21,5 +33,37 @@
         <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <exec.mainClass>sudoku.Main</exec.mainClass>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>14.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>14.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>4.2.3</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject.extensions</groupId>
+            <artifactId>guice-persist</artifactId>
+            <version>4.2.3</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>
