@@ -18,6 +18,12 @@ public class Board {
     private Long[][] board;
 
 
+    /**
+     * Changes the stored value of a cell.
+     * @param i the row in which the cell is
+     * @param j the column in which the cell is
+     * @param v the new value in the cell.
+     */
     public void setCellValue(int i, int j, Long v) {
         if (v < 0)
             throw new IllegalArgumentException("Negative cell value");
@@ -29,26 +35,34 @@ public class Board {
     }
 
 
+    /**
+     * Returns the value stored in the given cell.
+     *
+     * @param i the row in which the cell is
+     * @param j the column in which the cell is
+     * @return the value stored in the given cell
+     */
     public Long getCellValue(int i, int j) {
         if (i < 0 || j < 0 || i > 8 || j > 8)
             throw new IllegalArgumentException("Out of bounds i or j");
         return board[i][j];
     }
 
-    public Long[][] getBoard() {
-        return board;
-    }
-
+    /**
+     * Creates a new board based on the contents of the startingboard.json file.
+     */
     public void createBoard() throws IOException, ParseException {
         JSONArray array = (JSONArray) new JSONParser().parse(new FileReader("src/main/resources/startingboard.json"));
-        JSONObject jo = (JSONObject) array.get(0); // To be randomized...
+        JSONObject jo = (JSONObject) array.get(1); // To be randomized...
         this.board = new Long[9][9];
         Long v;
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 v = (Long) (((JSONArray) jo.get(String.valueOf(i+1))).get(j));
                 this.board[i][j] = v;
+                System.out.print(board[i][j]);
             }
+            System.out.println("\n");
         }
     }
 
