@@ -9,10 +9,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.inject.Inject;
 import java.io.IOException;
 
+@Slf4j
 public class LaunchController {
 
     @Inject
@@ -36,6 +38,7 @@ public class LaunchController {
             scene.getStylesheets().add("game.css");
             stage.setScene(scene);
             stage.show();
+            log.info("The players name is set to {}, loading game scene", playerNameTextField.getText());
         }
     }
 

@@ -60,9 +60,7 @@ public class Board {
             for (int j = 0; j < 9; j++) {
                 v = (Long) (((JSONArray) jo.get(String.valueOf(i+1))).get(j));
                 this.board[i][j] = v;
-                System.out.print(board[i][j]);
             }
-            System.out.println("\n");
         }
     }
 

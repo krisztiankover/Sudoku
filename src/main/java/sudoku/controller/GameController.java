@@ -255,7 +255,7 @@ public class GameController {
         //((Button) gameGrid.getChildren().get(5)).setText(String.valueOf(cellButtons[0][3]));
         gameOver.addListener((observableValue, oldValue, newValue) -> {
             if (newValue) {
-                log.info("Game is over");
+                log.info("Player {} has solved the game", playerName);
                 gameResultDao.persist(createGameResult());
             }
         });
@@ -279,7 +279,6 @@ public class GameController {
                 else {
                     cellButtons[i][j].setText(String.valueOf(board.getCellValue(i, j)));
                 }
-
             }
         }
         gameOver.setValue(false);
