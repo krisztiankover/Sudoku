@@ -41,7 +41,7 @@ public class Board {
 
     public void createBoard() throws IOException, ParseException {
         JSONArray array = (JSONArray) new JSONParser().parse(new FileReader("src/main/resources/startingboard.json"));
-        JSONObject jo = (JSONObject) array.get(1); // To be randomized...
+        JSONObject jo = (JSONObject) array.get(0); // To be randomized...
         this.board = new Long[9][9];
         Long v;
         for (int i = 0; i < 9; i++) {
