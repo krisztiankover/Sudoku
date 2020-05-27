@@ -7,9 +7,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.text.Text?>
 <BorderPane maxWidth="-Infinity" maxHeight="-Infinity" minWidth="-Infinity" minHeight="-Infinity" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sudoku.controller.GameController">
+    <top>
+        <Label fx:id="label" prefWidth="550" alignment="CENTER"/>
+    </top>
     <center>
-        <GridPane fx:id="gameGrid" prefHeight="450" prefWidth="550" BorderPane.alignment="CENTER" gridLinesVisible="true">
+        <GridPane fx:id="gameGrid" prefHeight="450" prefWidth="550" BorderPane.alignment="CENTER">
             <children>
                 <Button fx:id="cb00" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="0" onAction="#onCellClick"/>
                 <Button fx:id="cb01" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="1" onAction="#onCellClick"/>
@@ -109,6 +113,6 @@
         </GridPane>
     </right>
     <bottom>
-        <Button fx:id="giveUpButton" text="Give Up" prefHeight="50" prefWidth="100" onAction="#handleGiveUpButton"/>
+        <Button fx:id="giveUpButton" text="Give Up" prefHeight="50" prefWidth="150" onAction="#handleGiveUpButton"/>
     </bottom>
 </BorderPane>

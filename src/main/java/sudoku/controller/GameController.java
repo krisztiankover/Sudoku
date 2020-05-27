@@ -1,5 +1,6 @@
 package sudoku.controller;
 
+import javafx.application.Platform;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.event.ActionEvent;
@@ -9,6 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
@@ -25,6 +27,7 @@ import java.time.Instant;
 @Slf4j
 public class GameController {
 
+    @FXML
     private String playerName;
     private Instant startTime;
     int fillNumber = 1;
@@ -32,6 +35,9 @@ public class GameController {
 
     @FXML
     private Button giveUpButton;
+
+    @FXML
+    Label label;
 
     @FXML
     private Button cb00 = new Button();
@@ -256,6 +262,7 @@ public class GameController {
         resetGame();
         loadButtons();
         deactivateButtons();
+        Platform.runLater(() -> label.setText("Good luck, " + playerName + "!"));
     }
 
     public void resetGame() throws IOException, ParseException {
@@ -275,18 +282,6 @@ public class GameController {
 
             }
         }
-        System.out.println(cb55.getText());
-
-        /*
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                Button b = cellButtons[i][j];
-                b.setText(String.valueOf(board.getCellValue(i, j)));
-                if (board.getCellValue(i, j) == 0) {
-                    b.setDisable(true);
-                }
-            }
-        }*/
         gameOver.setValue(false);
     }
 

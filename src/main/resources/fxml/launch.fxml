@@ -9,12 +9,12 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400" prefHeight="600" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sudoku.controller.LaunchController">
     <children>
-        <Label layoutX="130" layoutY="75" text="Sudoku">
+        <Label layoutX="110" layoutY="75" text="Sudoku">
             <font>
-                <Font size="40"/>
+                <Font size="50"/>
             </font>
         </Label>
-        <TextField fx:id="playerNameTextField" layoutX="150" layoutY="200" prefHeight="25" prefWidth="100"/>
+        <TextField fx:id="playerNameTextField" layoutX="125" layoutY="200" prefHeight="40" prefWidth="150"/>
         <Button fx:id="startButton" layoutX="150" layoutY="300" onAction="#startAction" prefHeight="50" prefWidth="100" text="Start"/>
         <Label fx:id="errorLabel" layoutX="150" layoutY="225" prefHeight="16" prefWidth="150"/>
     </children>

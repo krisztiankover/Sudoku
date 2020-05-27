@@ -1,0 +1,14 @@
+.label {
+    -fx-font-size: 30;
+}
+
+.button:hover {
+    -fx-background-color: lightgray;
+}
+
+.button {
+    -fx-background-color: lightblue;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-font-size: 24;
+}
