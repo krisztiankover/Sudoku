@@ -18,10 +18,20 @@ public class Board {
     private Long[][] board;
 
 
-    public void setCellValue(int i, int j, Long v) { board[i][j] = v; }
+    public void setCellValue(int i, int j, Long v) {
+        if (v < 0)
+            throw new IllegalArgumentException("Negative cell value");
+        if (v > 8)
+            throw new IllegalArgumentException("Cell value is larger than 8");
+        if (i < 0 || j < 0 || i > 8 || j > 8)
+            throw new IllegalArgumentException("Out of bounds i or j");
+        board[i][j] = v;
+    }
 
 
     public Long getCellValue(int i, int j) {
+        if (i < 0 || j < 0 || i > 8 || j > 8)
+            throw new IllegalArgumentException("Out of bounds i or j");
         return board[i][j];
     }
 
