@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxWidth="-Infinity" maxHeight="-Infinity" minWidth="-Infinity" minHeight="-Infinity" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sudoku.controller.GameController">
+    <center>
+        <GridPane fx:id="gameGrid" prefHeight="450" prefWidth="550" BorderPane.alignment="CENTER" gridLinesVisible="true">
+            <children>
+                <Button fx:id="cb00" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="0" onAction="#onCellClick"/>
+                <Button fx:id="cb01" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="1" onAction="#onCellClick"/>
+                <Button fx:id="cb02" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="2" onAction="#onCellClick"/>
+                <Button fx:id="cb03" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="3" onAction="#onCellClick"/>
+                <Button fx:id="cb04" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="4" onAction="#onCellClick"/>
+                <Button fx:id="cb05" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="5" onAction="#onCellClick"/>
+                <Button fx:id="cb06" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="6" onAction="#onCellClick"/>
+                <Button fx:id="cb07" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="7" onAction="#onCellClick"/>
+                <Button fx:id="cb08" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="8" onAction="#onCellClick"/>
+                <Button fx:id="cb10" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="0" onAction="#onCellClick"/>
+                <Button fx:id="cb11" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#onCellClick"/>
+                <Button fx:id="cb12" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#onCellClick"/>
+                <Button fx:id="cb13" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#onCellClick"/>
+                <Button fx:id="cb14" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="4" onAction="#onCellClick"/>
+                <Button fx:id="cb15" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="5" onAction="#onCellClick"/>
+                <Button fx:id="cb16" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="6" onAction="#onCellClick"/>
+                <Button fx:id="cb17" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="7" onAction="#onCellClick"/>
+                <Button fx:id="cb18" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="8" onAction="#onCellClick"/>
+                <Button fx:id="cb20" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="0" onAction="#onCellClick"/>
+                <Button fx:id="cb21" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#onCellClick"/>
+                <Button fx:id="cb22" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#onCellClick"/>
+                <Button fx:id="cb23" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="3" onAction="#onCellClick"/>
+                <Button fx:id="cb24" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="4" onAction="#onCellClick"/>
+                <Button fx:id="cb25" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="5" onAction="#onCellClick"/>
+                <Button fx:id="cb26" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="6" onAction="#onCellClick"/>
+                <Button fx:id="cb27" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="7" onAction="#onCellClick"/>
+                <Button fx:id="cb28" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="8" onAction="#onCellClick"/>
+                <Button fx:id="cb30" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="0" onAction="#onCellClick"/>
+                <Button fx:id="cb31" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#onCellClick"/>
+                <Button fx:id="cb32" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="2" onAction="#onCellClick"/>
+                <Button fx:id="cb33" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="3" onAction="#onCellClick"/>
+                <Button fx:id="cb34" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="4" onAction="#onCellClick"/>
+                <Button fx:id="cb35" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="5" onAction="#onCellClick"/>
+                <Button fx:id="cb36" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="6" onAction="#onCellClick"/>
+                <Button fx:id="cb37" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="7" onAction="#onCellClick"/>
+                <Button fx:id="cb38" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="8" onAction="#onCellClick"/>
+                <Button fx:id="cb40" prefWidth="50" prefHeight="50" GridPane.columnIndex="4" GridPane.rowIndex="0" onAction="#onCellClick"/>
+                <Button fx:id="cb41" prefWidth="50" prefHeight="50" GridPane.columnIndex="4" GridPane.rowIndex="1" onAction="#onCellClick"/>
+                <Button fx:id="cb42" prefWidth="50" prefHeight="50" GridPane.columnIndex="4" GridPane.rowIndex="2" onAction="#onCellClick"/>
+                <Button fx:id="cb43" prefWidth="50" prefHeight="50" GridPane.columnIndex="4" GridPane.rowIndex="3" onAction="#onCellClick"/>
+                <Button fx:id="cb44" prefWidth="50" prefHeight="50" GridPane.columnIndex="4" GridPane.rowIndex="4" onAction="#onCellClick"/>
+                <Button fx:id="cb45" prefWidth="50" prefHeight="50" GridPane.columnIndex="4" GridPane.rowIndex="5" onAction="#onCellClick"/>
+                <Button fx:id="cb46" prefWidth="50" prefHeight="50" GridPane.columnIndex="4" GridPane.rowIndex="6" onAction="#onCellClick"/>
+                <Button fx:id="cb47" prefWidth="50" prefHeight="50" GridPane.columnIndex="4" GridPane.rowIndex="7" onAction="#onCellClick"/>
+                <Button fx:id="cb48" prefWidth="50" prefHeight="50" GridPane.columnIndex="4" GridPane.rowIndex="8" onAction="#onCellClick"/>
+                <Button fx:id="cb50" prefWidth="50" prefHeight="50" GridPane.columnIndex="5" GridPane.rowIndex="0" onAction="#onCellClick"/>
+                <Button fx:id="cb51" prefWidth="50" prefHeight="50" GridPane.columnIndex="5" GridPane.rowIndex="1" onAction="#onCellClick"/>
+                <Button fx:id="cb52" prefWidth="50" prefHeight="50" GridPane.columnIndex="5" GridPane.rowIndex="2" onAction="#onCellClick"/>
+                <Button fx:id="cb53" prefWidth="50" prefHeight="50" GridPane.columnIndex="5" GridPane.rowIndex="3" onAction="#onCellClick"/>
+                <Button fx:id="cb54" prefWidth="50" prefHeight="50" GridPane.columnIndex="5" GridPane.rowIndex="4" onAction="#onCellClick"/>
+                <Button fx:id="cb55" prefWidth="50" prefHeight="50" GridPane.columnIndex="5" GridPane.rowIndex="5" onAction="#onCellClick"/>
+                <Button fx:id="cb56" prefWidth="50" prefHeight="50" GridPane.columnIndex="5" GridPane.rowIndex="6" onAction="#onCellClick"/>
+                <Button fx:id="cb57" prefWidth="50" prefHeight="50" GridPane.columnIndex="5" GridPane.rowIndex="7" onAction="#onCellClick"/>
+                <Button fx:id="cb58" prefWidth="50" prefHeight="50" GridPane.columnIndex="5" GridPane.rowIndex="8" onAction="#onCellClick"/>
+                <Button fx:id="cb60" prefWidth="50" prefHeight="50" GridPane.columnIndex="6" GridPane.rowIndex="0" onAction="#onCellClick"/>
+                <Button fx:id="cb61" prefWidth="50" prefHeight="50" GridPane.columnIndex="6" GridPane.rowIndex="1" onAction="#onCellClick"/>
+                <Button fx:id="cb62" prefWidth="50" prefHeight="50" GridPane.columnIndex="6" GridPane.rowIndex="2" onAction="#onCellClick"/>
+                <Button fx:id="cb63" prefWidth="50" prefHeight="50" GridPane.columnIndex="6" GridPane.rowIndex="3" onAction="#onCellClick"/>
+                <Button fx:id="cb64" prefWidth="50" prefHeight="50" GridPane.columnIndex="6" GridPane.rowIndex="4" onAction="#onCellClick"/>
+                <Button fx:id="cb65" prefWidth="50" prefHeight="50" GridPane.columnIndex="6" GridPane.rowIndex="5" onAction="#onCellClick"/>
+                <Button fx:id="cb66" prefWidth="50" prefHeight="50" GridPane.columnIndex="6" GridPane.rowIndex="6" onAction="#onCellClick"/>
+                <Button fx:id="cb67" prefWidth="50" prefHeight="50" GridPane.columnIndex="6" GridPane.rowIndex="7" onAction="#onCellClick"/>
+                <Button fx:id="cb68" prefWidth="50" prefHeight="50" GridPane.columnIndex="6" GridPane.rowIndex="8" onAction="#onCellClick"/>
+                <Button fx:id="cb70" prefWidth="50" prefHeight="50" GridPane.columnIndex="7" GridPane.rowIndex="0" onAction="#onCellClick"/>
+                <Button fx:id="cb71" prefWidth="50" prefHeight="50" GridPane.columnIndex="7" GridPane.rowIndex="1" onAction="#onCellClick"/>
+                <Button fx:id="cb72" prefWidth="50" prefHeight="50" GridPane.columnIndex="7" GridPane.rowIndex="2" onAction="#onCellClick"/>
+                <Button fx:id="cb73" prefWidth="50" prefHeight="50" GridPane.columnIndex="7" GridPane.rowIndex="3" onAction="#onCellClick"/>
+                <Button fx:id="cb74" prefWidth="50" prefHeight="50" GridPane.columnIndex="7" GridPane.rowIndex="4" onAction="#onCellClick"/>
+                <Button fx:id="cb75" prefWidth="50" prefHeight="50" GridPane.columnIndex="7" GridPane.rowIndex="5" onAction="#onCellClick"/>
+                <Button fx:id="cb76" prefWidth="50" prefHeight="50" GridPane.columnIndex="7" GridPane.rowIndex="6" onAction="#onCellClick"/>
+                <Button fx:id="cb77" prefWidth="50" prefHeight="50" GridPane.columnIndex="7" GridPane.rowIndex="7" onAction="#onCellClick"/>
+                <Button fx:id="cb78" prefWidth="50" prefHeight="50" GridPane.columnIndex="7" GridPane.rowIndex="8" onAction="#onCellClick"/>
+                <Button fx:id="cb80" prefWidth="50" prefHeight="50" GridPane.columnIndex="8" GridPane.rowIndex="0" onAction="#onCellClick"/>
+                <Button fx:id="cb81" prefWidth="50" prefHeight="50" GridPane.columnIndex="8" GridPane.rowIndex="1" onAction="#onCellClick"/>
+                <Button fx:id="cb82" prefWidth="50" prefHeight="50" GridPane.columnIndex="8" GridPane.rowIndex="2" onAction="#onCellClick"/>
+                <Button fx:id="cb83" prefWidth="50" prefHeight="50" GridPane.columnIndex="8" GridPane.rowIndex="3" onAction="#onCellClick"/>
+                <Button fx:id="cb84" prefWidth="50" prefHeight="50" GridPane.columnIndex="8" GridPane.rowIndex="4" onAction="#onCellClick"/>
+                <Button fx:id="cb85" prefWidth="50" prefHeight="50" GridPane.columnIndex="8" GridPane.rowIndex="5" onAction="#onCellClick"/>
+                <Button fx:id="cb86" prefWidth="50" prefHeight="50" GridPane.columnIndex="8" GridPane.rowIndex="6" onAction="#onCellClick"/>
+                <Button fx:id="cb87" prefWidth="50" prefHeight="50" GridPane.columnIndex="8" GridPane.rowIndex="7" onAction="#onCellClick"/>
+                <Button fx:id="cb88" prefWidth="50" prefHeight="50" GridPane.columnIndex="8" GridPane.rowIndex="8" onAction="#onCellClick"/>
+            </children>
+        </GridPane>
+    </center>
+    <right>
+        <GridPane>
+            <Button fx:id="one" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="0" onAction="#handleNumberClick" text="1"/>
+            <Button fx:id="two" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="1" onAction="#handleNumberClick" text="2"/>
+            <Button fx:id="three" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="2" onAction="#handleNumberClick" text="3"/>
+            <Button fx:id="four" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="3" onAction="#handleNumberClick" text="4"/>
+            <Button fx:id="five" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="4" onAction="#handleNumberClick" text="5"/>
+            <Button fx:id="six" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="5" onAction="#handleNumberClick" text="6"/>
+            <Button fx:id="seven" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="6" onAction="#handleNumberClick" text="7"/>
+            <Button fx:id="eight" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="7" onAction="#handleNumberClick" text="8"/>
+            <Button fx:id="nine" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="8" onAction="#handleNumberClick" text="9"/>
+        </GridPane>
+    </right>
+    <bottom>
+        <Button fx:id="giveUpButton" text="Give Up" prefHeight="50" prefWidth="100" onAction="#handleGiveUpButton"/>
+    </bottom>
+</BorderPane>
