@@ -64,7 +64,7 @@ class BoardTest {
         IllegalArgumentException e = assertThrows(IllegalArgumentException.class, () -> {
             board.setCellValue(i, j, v);
         });
-        assertEquals("Cell value is larger than 8", e.getMessage());
+        assertEquals("Cell value is larger than 9", e.getMessage());
     }
 
     @Test
