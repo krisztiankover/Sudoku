@@ -15,7 +15,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.json.simple.parser.ParseException;
-import sudoku.Board;
+import sudoku.state.Board;
 import sudoku.result.GameResult;
 import sudoku.result.GameResultDao;
 
@@ -245,10 +245,21 @@ public class GameController {
     @Inject
     private GameResultDao gameResultDao;
 
+    /**
+     * Changes the playerName to the given {@code}String parameter.
+     *
+     * @param playerName the {@code}String the playerName is changed to.
+     */
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
 
+    /**
+     * Responsible for initializing the starting board.
+     *
+     * @throws IOException
+     * @throws ParseException
+     */
     @FXML
     public void initialize() throws IOException, ParseException {
 
@@ -265,6 +276,12 @@ public class GameController {
         Platform.runLater(() -> label.setText("Good luck, " + playerName + "!"));
     }
 
+    /**
+     * Responsible for creating the starting board consisting of the grid.
+     *
+     * @throws IOException
+     * @throws ParseException
+     */
     public void resetGame() throws IOException, ParseException {
         board = new Board();
         board.createBoard();
@@ -284,6 +301,9 @@ public class GameController {
         gameOver.setValue(false);
     }
 
+    /**
+     * Changes the text of the buttons in the {@code}gridPane.
+     */
     public void loadButtons() {
          cb00.setText(cellButtons[0][0].getText());
          cb01.setText(cellButtons[0][1].getText());
@@ -368,6 +388,11 @@ public class GameController {
         cb88.setText(cellButtons[8][8].getText());
     }
 
+    /**
+     * Handles the clicking on the buttons in the grid.
+     *
+     * @param actionEvent the event of clicking
+     */
     public void onCellClick(ActionEvent actionEvent) {
         Button b = ((Button) actionEvent.getSource());
         String s = b.getId();
@@ -381,11 +406,24 @@ public class GameController {
             giveUpButton.setText("Finish");
     }
 
+    /**
+     * Handles the clicking on the 9 buttons on the side containig the 9 numbers.
+     *
+     *
+     * @param actionEvent
+     */
     public void handleNumberClick(ActionEvent actionEvent) {
         fillNumber = Integer.parseInt(((Button) actionEvent.getSource()).getText());
         log.info("The number {} is clicked", fillNumber);
     }
 
+    /**
+     * Handles the GiveUp button. Clicking on it finishes the game and loads
+     * the highscore board.
+     *
+     * @param actionEvent
+     * @throws IOException
+     */
     public void handleGiveUpButton(ActionEvent actionEvent) throws IOException {
         String buttonText = ((Button) actionEvent.getSource()).getText();
         log.debug("{} is pressed", buttonText);
@@ -400,6 +438,9 @@ public class GameController {
         stage.show();
     }
 
+    /**
+     * Disables the buttons that contain numbers at the start of the game.
+     */
     public void deactivateButtons() {
         GridPane gp = (GridPane) cb00.getParent();
         Object[] ba = gp.getChildren().toArray();
@@ -410,6 +451,12 @@ public class GameController {
         }
     }
 
+    /**
+     * Builds the gameresult of a successfully solved game.
+     *
+     * @return the result of the game containing the player's name and the duration
+     * of the game.
+     */
     private GameResult createGameResult() {
         GameResult result = GameResult.builder()
                 .player(playerName)

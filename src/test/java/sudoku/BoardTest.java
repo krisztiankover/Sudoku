@@ -4,6 +4,7 @@ import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import sudoku.state.Board;
 
 import java.io.IOException;
 

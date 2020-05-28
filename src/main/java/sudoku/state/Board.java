@@ -1,4 +1,4 @@
-package sudoku;
+package sudoku.state;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -10,6 +10,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Responsible for creating the puzzle board from the given json file and for storing
+ * that said board in a {@code}Long[][] 2D array.
+ */
 public class Board {
 
     /**
