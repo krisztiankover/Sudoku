@@ -252,10 +252,10 @@ public class GameController {
     @FXML
     public void initialize() throws IOException, ParseException {
 
-        //((Button) gameGrid.getChildren().get(5)).setText(String.valueOf(cellButtons[0][3]));
         gameOver.addListener((observableValue, oldValue, newValue) -> {
             if (newValue) {
                 log.info("Player {} has solved the game", playerName);
+                log.debug("Saving result to database...");
                 gameResultDao.persist(createGameResult());
             }
         });
@@ -377,6 +377,8 @@ public class GameController {
         log.info("Cell ({} {}) is clicked", col, row);
         b.setText(String.valueOf(fillNumber));
         gameOver.setValue(board.isFinished());
+        if (gameOver.getValue())
+            giveUpButton.setText("Finish");
     }
 
     public void handleNumberClick(ActionEvent actionEvent) {
@@ -390,7 +392,6 @@ public class GameController {
         if (buttonText.equals("Give Up")) {
             log.info("The game has been given up");
         }
-        gameOver.setValue(true);
         log.info("Loading high scores scene...");
         fxmlLoader.setLocation(getClass().getResource("/fxml/highscores.fxml"));
         Parent root = fxmlLoader.load();
